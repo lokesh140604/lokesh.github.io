@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="style-link" rel="stylesheet" href="light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!--NAVIGATION BAR-->
+    <header>
+        
+        <nav>
+            <ul >
+                <li><a href="main.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button style="background-color: black; color:Red " onclick="toggleStyles()">MODE</button>
+                
+            </ul>
+        </nav>
+   </header>
+
+    <div id="About">
+        <br><br>
+        <h1>ABOUT ME</h1>
+        <div >
+            <p>
+                Hello! I'm Lokesh, a self-driven individual on a unique
+                educational journey supported by my father, Anjan Goud,
+                and my mother, Saraswathi. Under the guidance of SPR,
+                every step in my educational path is enriched by wisdom,
+                supported by familial bonds.
+                My educational approach is a harmonious blend of self-driven
+                exploration and the mentorship of SPR. This dynamic duo,
+                complemented by the unwavering support of my parents, shapes
+                my pursuit of knowledge.
+                I am a dedicated student currently enrolled in the Computer
+                Human Interaction Design (CHD) course at the International
+                Institute of Information Technology, Hyderabad (IIITH). This
+                dynamic program has been the perfect canvas for me to blend
+                my passion for technology with a keen interest in creating
+                user-centric and meaningful experiences.
+            </p>
+            <br><br>
+            <footer>
+                <p ><a href="resume.pdf">MY Resume</a></p>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+   
+
+</section>
+
+<script>
+    
+    function toggleStyles() {
+        var styleLink = document.getElementById('style-link');
+        
+        if (styleLink.href.includes('light.css')) {
+            styleLink.href = 'dark.css';
+        } else {
+            styleLink.href = 'light.css';
+        }
+    }
+    
+</script>
+<br><br><br><br><br><br>
+<footer>
+    <div class="icon">
+        
+        <div class="icon-size">
+            <a href="mailto:lokeshgoud1406@gmail.com"><box-icon name='child'></box-icon>
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/128/5968/5968534.png" alt="Email Icon">
+            </a>
+        </div>
+
+        <div class="icon-size">
+            <a href="https://github.com/lokesh140604" target="_blank">
+                <img class="icon" src="https://img.icons8.com/?size=96&id=bVGqATNwfhYq&format=png" alt="GitHub">
+            </a>
+        </div>
+
+        <div class="icon-size">
+            <a href="https://www.instagram.com/lokesh_loki_04_/" target="_blank">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="instagram icon">
+            </a>
+        </div>
+
+        <div class="icon-size">
+            <a href="https://www.facebook.com/lokesh.goud.37604" target="_blank">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook Icon">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

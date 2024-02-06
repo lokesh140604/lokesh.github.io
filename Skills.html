@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="style-link" rel="stylesheet" href="light.css">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button style="background-color: black; color:Red " onclick="toggleStyles()">MODE</button>
+            </ul>
+            <button style="background-color: black; color: red" onclick="toggleStyles()">MODE</button>
+        </nav>
+    </header>
+
+    <div class="skill">
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">C</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">Badminton</div>
+        <div class="skill-box">Volleyball</div>
+    </div>
+
+    <script>
+        function toggleStyles() {
+            var styleLink = document.getElementById('style-link');
+            
+            if (styleLink.href.includes('light.css')) {
+                styleLink.href = 'dark.css';
+            } else {
+                styleLink.href = 'light.css';
+            }
+        }
+    </script>
+</body>
+</html>

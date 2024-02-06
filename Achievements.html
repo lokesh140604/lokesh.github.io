@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="style-link" rel="stylesheet" href="light.css">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header>
+        
+        <nav>
+            <ul style="list-style: disc;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button style="background-color: black; color:Red " onclick="toggleStyles()">MODE</button>
+                
+            </ul>
+        </nav>
+   </header>
+   <div id="About">
+    <br><br>
+    <h1>MY Achievements</h1>
+    <div >
+        <p>
+            Cleared the JEE Mains and Advanced exams, considered among the most challenging in the world, along with UGEE and various other exams, through self-learning starting from the 8th grade
+        </p>
+        <p>
+            After successfully cracking the UGEE exam in two phases and acing the interview, I proudly secured the 223rd rank and earned admission into the prestigious CHD program at IIITH
+        </p>
+        <p></p>
+        
+    
+    </div>
+</div>
+  
+   <!--MENU TOGGLE-->
+   <script>
+    
+    function toggleStyles() {
+        var styleLink = document.getElementById('style-link');
+        if (styleLink.href.includes('light.css')) {
+            styleLink.href = 'dark.css';
+        } else {
+            styleLink.href = 'light.css';
+        }
+    }
+</script>
+
+    
+</body>
+</html>

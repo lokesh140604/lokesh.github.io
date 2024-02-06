@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="style-link" rel="stylesheet" href="light.css">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header>
+        <nav>
+            <ul>
+                <li style="transform: rotate(360deg);"><a href="index.htm">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button style="background-color: black; color:Red " onclick="toggleStyles()">MODE</button>
+            </ul>
+        </nav>
+    </header>
+   <div id="edu">
+    <h1>Education</h1>
+    
+    <p>
+   I laid the foundation for my education, completing my studies up to the 7th grade with a focus on building strong fundamentals and a love for learning.
+    </p>
+    <p>
+        From 8th to 12th grade, my educational journey took an unconventional turn as I engaged in self-directed learning at Aksharavanam, a distinguished research and educational center. Guided by the esteemed SPR, I delved into a holistic approach to education, fostering not just knowledge acquisition but also critical thinking and research skills
+    </p>
+
+    <p>
+        Currently, I am enrolled in the first year of the Computer Human Interaction Design (CHD) program at the International Institute of Information Technology (IIIT), Hyderabad. This exciting phase is a result of my successful performance in the Undergraduate Entrance Examination (UGEE), marking the beginning of my journey into the realms of technology, design, and user-centric experiences.
+
+    </p>
+</div>
+    <!--MODE TOGGLE-->
+    <script>
+    
+        function toggleStyles() {
+            var styleLink = document.getElementById('style-link');
+            if (styleLink.href.includes('light.css')) {
+                styleLink.href = 'dark.css';
+            } else {
+                styleLink.href = 'light.css';
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dancing+Script:wght@500&family=Great+Vibes&family=Pacifico&family=Protest+Riot&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://iconscout.com/unicons/free-line-icons">
+    <title>Document</title>
+    <link id="style-link" rel="stylesheet" href="light.css">
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <nav>
+            <ul>
+                <li style="transform: rotate(360deg);"><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button style="background-color: black; color:Red " onclick="toggleStyles()">MODE</button>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+        <!-- LEFT TEXT -->
+        <div>
+            <h2 id="hey">
+                <pre style="font-family: 'Dancing Script', cursive;" class="blinking-text"> hey there! </pre>
+            </h2>
+            <h1 id="iam">
+                <pre style="font-family: 'Archivo Black', sans-serif;"> I'm Lokesh </pre>
+            </h1>
+        </div>
+
+        <!-- IMAGE -->
+        <div id="image">
+            <img src="2.png" alt="" style="border-radius: 50%; width: 80%; max-width: 300px; margin-top: 20px; animation: glow 4s infinite;">
+        </div>
+
+    </div>
+    <br><br><br>
+   
+
+    <!-- ICONS -->
+    <footer>
+        <div class="icon">
+            
+            <div class="icon-size">
+                <a href="mailto:lokeshgoud1406@gmail.com"><box-icon name='child'></box-icon>
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/5968/5968534.png" alt="Email Icon">
+                </a>
+            </div>
+
+            <div class="icon-size">
+                <a href="https://github.com/lokesh140604" target="_blank">
+                    <img class="icon" src="https://img.icons8.com/?size=96&id=bVGqATNwfhYq&format=png" alt="GitHub">
+                </a>
+            </div>
+
+            <div class="icon-size">
+                <a href="https://www.instagram.com/lokesh_loki_04_/" target="_blank">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="instagram icon">
+                </a>
+            </div>
+
+            <div class="icon-size">
+                <a href="https://www.facebook.com/lokesh.goud.37604" target="_blank">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook Icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+        <!--MODE TOGGLE-->
+    <script>
+        function toggleStyles() {
+            var styleLink = document.getElementById('style-link');
+
+            if (styleLink.href.includes('light.css')) {
+                styleLink.href = 'dark.css';
+            } else {
+                styleLink.href = 'light.css';
+            }
+        }
+    </script>
+
+    <style>
+        @keyframes blink {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+
+        
+        .blinking-text {
+            animation: blink 1s infinite;
+            animation: fadeIn 1s infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+       
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes easeOutDelay {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            .image img {
+                width: 60%; 
+            }
+        }
+    </style>
+
+</body>
+
+</html>

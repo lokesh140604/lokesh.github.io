@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="style-link" rel="stylesheet" href="light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!--NAVIGATION BAR-->
+    <header>
+        
+        <nav>
+            <ul >
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button style="background-color: black; color:Red " onclick="toggleStyles()">MODE</button>
+                
+            </ul>
+        </nav>
+   </header>
+   <!--function for toggling-->
+   <script>
+    
+    function toggleStyles() {
+        var styleLink = document.getElementById('style-link');
+        
+        // Check the current style and toggle to the other one
+        if (styleLink.href.includes('light.css')) {
+            styleLink.href = 'dark.css';
+        } else {
+            styleLink.href = 'light.css';
+        }
+    }
+</script>
+    <div style=></div>
+
+    <div id="blog"  class="blog-container" >
+        <div class="blog"  >
+            <br>
+            <h1>MY BLOGS</h1>
+            <h2>Blog 1</h2>
+            <div >
+                <img style="width: 20%;" src="1.jpg" alt="">
+            </div>
+            <button onclick="toggleLike('like-counter-blog1', this)"><i id="like-icon1" class="far fa-heart"></i> </button>
+            <div class="like-counter" id="like-counter-blog1">
+                Likes: <span id="like-count1">0</span>
+            </div>
+            <div class="comments" id="comments-blog1">
+                <h3>Comments</h3>
+                <textarea id="comment1" rows="4" cols="50" placeholder="Add your comment"></textarea>
+                <button onclick="addComment('comment1', 'comments-blog1')">Add Comment</button>
+            </div>
+        </div>
+        <div class="blog">
+            <br><br><br><br>
+            <h2>Blog 2</h2>
+            <div><img style="width: 20%;" src="x.jpg" alt=""></div>
+            
+            <button onclick="toggleLike('like-counter-blog2', this)"><i id="like-icon2" class="far fa-heart"></i></button>
+            <div class="like-counter" id="like-counter-blog2">
+                Likes: <span id="like-count2">0</span>
+            </div>
+            <div class="comments" id="comments-blog2">
+                <h3>Comments</h3>
+                <textarea id="comment2" rows="2" cols="50" placeholder="Add your comment"></textarea>
+                <button onclick="addComment('comment2', 'comments-blog2')">Add Comment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLike(spanId, button) {
+            var countSpan = document.getElementById(spanId).querySelector('span');
+            var count = parseInt(countSpan.textContent);
+            var likeIcon = button.querySelector('i');
+
+            if (likeIcon.classList.contains('far')) {
+                countSpan.textContent = count + 1;
+                likeIcon.classList.remove('far');
+                likeIcon.classList.add('fas');
+            } else {
+                countSpan.textContent = count - 1;
+                likeIcon.classList.remove('fas');
+                likeIcon.classList.add('far');
+            }
+            localStorage.setItem(spanId, countSpan.textContent);
+        }
+
+        function addComment(commentId, commentsContainerId) {
+            var commentTextarea = document.getElementById(commentId);
+            var comment = commentTextarea.value;
+            var commentsContainer = document.getElementById(commentsContainerId);
+            var commentList = document.createElement('ul');
+            var newComment = document.createElement('li');
+            newComment.textContent = comment;
+            commentList.appendChild(newComment);
+            commentsContainer.appendChild(commentList);
+           
+            localStorage.setItem(commentId, comment);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var likeCount1 = localStorage.getItem('like-count-blog1');
+            var likeCount2 = localStorage.getItem('like-count-blog2');
+            var comment1 = localStorage.getItem('comment1');
+            var comment2 = localStorage.getItem('comment2');
+
+            if (likeCount1) {
+                var countSpan1 = document.getElementById('like-count1');
+                countSpan1.textContent = likeCount1;
+            }
+            if (likeCount2) {
+                var countSpan2 = document.getElementById('like-count2');
+                countSpan2.textContent = likeCount2;
+            }
+            if (comment1) {
+                var commentsContainer1 = document.getElementById('comments-blog1');
+                var commentList1 = document.createElement('ul');
+                var newComment1 = document.createElement('li');
+                newComment1.textContent = comment1;
+                commentList1.appendChild(newComment1);
+                commentsContainer1.appendChild(commentList1);
+            }
+            if (comment2) {
+                var commentsContainer2 = document.getElementById('comments-blog2');
+                var commentList2 = document.createElement('ul');
+                var newComment2 = document.createElement('li');
+                newComment2.textContent = comment2;
+                commentList2.appendChild(newComment2);
+                commentsContainer2.appendChild(commentList2);
+            }
+        });
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="style-link" rel="stylesheet" href="light.css">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header>
+        
+        <nav>
+            <ul >
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button style="background-color: black; color:Red " onclick="toggleStyles()">MODE</button>
+                
+            </ul>
+        </nav>
+   </header>
+   <!--function for toggling-->
+   <script>
+    
+    function toggleStyles() {
+        var styleLink = document.getElementById('style-link');
+        
+        // Check the current style and toggle to the other one
+        if (styleLink.href.includes('light.css')) {
+            styleLink.href = 'dark.css';
+        } else {
+            styleLink.href = 'light.css';
+        }
+    }
+</script>
+<br><br><br><br>
+
+<div class="contact-container">
+    <div class="contact-details">
+        
+        <div class="contact-item">
+            <h3>Instagram:</h3>
+            <p><a href="https://www.instagram.com/lokesh_loki_04_/?next=%2F" target="_blank">lokesh_loki_04_</a></p>
+        </div>
+        <div class="contact-item">
+            <h3>Facebook:</h3>
+            <p><a href="https://www.facebook.com/lokesh.goud.37604" target="_blank">lokesh loki</a></p>
+        </div>
+        <div class="contact-item">
+            <h3>Gmail:</h3>
+            <p><a href="mailto:lokeshgoud1406@gmail.com">lokeshgoud1406@gmail.com</a></p>
+        </div>
+        <div class="contact-item">
+            <h3>GitHub:</h3>
+            <p><a href="https://github.com/lokesh140604" target="_blank">lokesh140604</a></p>
+        </div>
+        <div class="contact-item">
+            <h3>Phone:</h3>
+            <p>+91 9391619503</p>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
